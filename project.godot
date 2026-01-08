@@ -12,12 +12,20 @@ config_version=5
 
 config/name="wugi"
 run/main_scene="uid://d15ehaour68v"
+<<<<<<< HEAD
 config/features=PackedStringArray("4.5", "Forward Plus")
+=======
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
+>>>>>>> c8b50b9f587d7a700ab82ef3f231a5daae29ff80
 config/icon="res://icon.svg"
 
 [autoload]
 
 SystemMonitor="*res://Scripts/SystemMonitor.cs"
+<<<<<<< HEAD
+=======
+SystemConsole="*res://Scripts/SystemConsole.cs"
+>>>>>>> c8b50b9f587d7a700ab82ef3f231a5daae29ff80
 
 [display]
 
