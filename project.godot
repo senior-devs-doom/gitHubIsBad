@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SystemMonitor="*res://Scripts/SystemMonitor.cs"
+SystemMonitor="*res://karol/Scripts/SystemMonitor.cs"
+SystemConsole="*res://karol/Scripts/SystemConsole.cs"
 
 [display]
 

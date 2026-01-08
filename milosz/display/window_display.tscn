@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://vgi201ew802q"]
 
-[ext_resource type="Script" uid="uid://c8tqth6gq0e5u" path="res://display/main.gd" id="2_jodh0"]
+[ext_resource type="Script" uid="uid://c8tqth6gq0e5u" path="res://milosz/display/main.gd" id="2_jodh0"]
 [ext_resource type="Texture2D" uid="uid://b48toa4japns2" path="res://sprites/mouse_move.png" id="2_pe6s5"]
 [ext_resource type="Texture2D" uid="uid://bgn2p4xr5pvga" path="res://sprites/mouse_idle.png" id="3_ig5gm"]
 [ext_resource type="Texture2D" uid="uid://cie2tvx812gb" path="res://sprites/mouse_suprised.png" id="4_ka70a"]
