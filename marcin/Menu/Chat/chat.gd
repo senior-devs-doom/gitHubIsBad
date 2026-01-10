@@ -19,6 +19,9 @@ func _ready() -> void:
 	send_btn.pressed.connect(_on_send_pressed)
 	input.grab_focus()
 
+	# listen for responses from AgentManager
+	if AgentManager:
+		AgentManager.ChatResponse.connect(_on_chat_response)
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
@@ -43,7 +46,14 @@ func _send_message() -> void:
 	_add_user_bubble(text)
 	input.text = ""
 	input.grab_focus()
-	_add_gpt_bubble("hello world")
+
+	# send to AgentManager
+	if AgentManager:
+		AgentManager.SubmitChat(text)
+
+
+func _on_chat_response(text: String) -> void:
+	_add_gpt_bubble(text)
 
 
 func _add_user_bubble(text: String) -> void:

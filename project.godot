@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 SystemMonitor="*res://karol/Scripts/SystemMonitor.cs"
 SystemConsole="*res://karol/Scripts/SystemConsole.cs"
 LLM="*res://karol/Scripts/LLM.cs"
+AgentManager="*res://karol/Scripts/AgentManager.cs"
 
 [display]
 
