@@ -9,12 +9,14 @@ var is_suprised: bool = false
 
 @export var navbar_scene: PackedScene
 @export var chat_window_scene: PackedScene
+@export var cmd_window_scene: PackedScene   # NEW
 
 const MARGIN := 8.0
 
 var ui_layer: CanvasLayer
 var navbar: InputNavbar
 var chat_window: Window
+var cmd_window: Window                     # NEW
 
 func _ready() -> void:
 	_MainWindow.borderless = true
@@ -39,8 +41,11 @@ func _spawn_navbar() -> void:
 	ui_layer.add_child(navbar)
 	navbar.hide()
 
-	if navbar.has_signal("open_chat_requested"):
-		navbar.open_chat_requested.connect(_on_open_chat_requested)
+	# existing chat hookup
+	navbar.open_chat_requested.connect(_on_open_chat_requested)
+
+	# NEW: cmd hookup
+	navbar.open_cmd_requested.connect(_on_open_cmd_requested)
 
 func _input(event: InputEvent) -> void:
 	if _mouse_over_ui():
@@ -135,10 +140,17 @@ func _reposition_navbar() -> void:
 		navbar.global_position = Vector2(clamp(right_x, screen_left, screen_right - nav_size.x), y)
 
 func _get_sprite_size() -> Vector2:
-	var tex := animated_sprite_2d.sprite_frames.get_frame_texture(animated_sprite_2d.animation, animated_sprite_2d.frame)
+	var tex := animated_sprite_2d.sprite_frames.get_frame_texture(
+		animated_sprite_2d.animation,
+		animated_sprite_2d.frame
+	)
 	if tex:
 		return tex.get_size() * animated_sprite_2d.scale
 	return Vector2(64, 64)
+
+# =============================
+# CHAT
+# =============================
 
 func _on_open_chat_requested() -> void:
 	_open_chat_window()
@@ -156,3 +168,25 @@ func _open_chat_window() -> void:
 	get_tree().root.add_child(chat_window)
 	chat_window.popup_centered()
 	chat_window.grab_focus()
+
+# =============================
+# CMD (NEW, PARALLEL LOGIC)
+# =============================
+
+func _on_open_cmd_requested() -> void:
+	_open_cmd_window()
+
+func _open_cmd_window() -> void:
+	if not cmd_window_scene:
+		return
+
+	if is_instance_valid(cmd_window):
+		cmd_window.popup_centered()
+		cmd_window.grab_focus()
+		return
+	
+	cmd_window = cmd_window_scene.instantiate() as Window
+	cmd_window.size = Vector2i(600, 400)
+	get_tree().root.add_child(cmd_window)
+	cmd_window.popup_centered()
+	cmd_window.grab_focus()

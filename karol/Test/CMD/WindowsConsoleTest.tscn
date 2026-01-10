@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bvr8h5fqacbby"]
 
-[ext_resource type="Script" uid="uid://8h0fuoaowe76" path="res://Test/WindowsConsoleTest.cs" id="1_1i7fj"]
+[ext_resource type="Script" uid="uid://8h0fuoaowe76" path="res://karol/Test/CMD/WindowsConsoleTest.cs" id="1_1i7fj"]
 
 [node name="WindowsConsoleTest" type="Node2D"]
 script = ExtResource("1_1i7fj")

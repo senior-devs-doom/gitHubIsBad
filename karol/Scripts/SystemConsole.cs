@@ -88,7 +88,7 @@ public partial class SystemConsole : Node
 	public void Send(string text)
 	{
 		if (!text.EndsWith("\r\n"))
-			text += "\r\n";
+			text += "\r";
 
 		WinConsoleBridge.Write(text);
 	}

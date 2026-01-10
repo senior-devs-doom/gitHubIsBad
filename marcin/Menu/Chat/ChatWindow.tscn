@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8rm15y81cony"]
 
-[ext_resource type="PackedScene" uid="uid://buo8kepq02r47" path="res://Menu/Chat/Chat.tscn" id="1_kocuy"]
-[ext_resource type="Script" uid="uid://7frccn61k5uq" path="res://Menu/Chat/chat_window.gd" id="1_se4eg"]
+[ext_resource type="PackedScene" uid="uid://buo8kepq02r47" path="res://marcin/Menu/Chat/Chat.tscn" id="1_kocuy"]
+[ext_resource type="Script" uid="uid://7frccn61k5uq" path="res://marcin/Menu/Chat/chat_window.gd" id="1_se4eg"]
 
 [node name="ChatWindow" type="Window"]
 oversampling_override = 1.0

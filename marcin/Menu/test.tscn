@@ -1,11 +1,12 @@
-[gd_scene load_steps=34 format=3 uid="uid://dajr2td3720kj"]
+[gd_scene load_steps=35 format=3 uid="uid://dajr2td3720kj"]
 
-[ext_resource type="Script" uid="uid://vlnpa0i57n37" path="res://Menu/test_.gd" id="1_p2inq"]
+[ext_resource type="Script" uid="uid://vlnpa0i57n37" path="res://marcin/Menu/test_.gd" id="1_p2inq"]
 [ext_resource type="Texture2D" uid="uid://b48toa4japns2" path="res://sprites/mouse_move.png" id="2_nj2f0"]
 [ext_resource type="Texture2D" uid="uid://bgn2p4xr5pvga" path="res://sprites/mouse_idle.png" id="3_epcmp"]
-[ext_resource type="PackedScene" uid="uid://c8rm15y81cony" path="res://Menu/Chat/ChatWindow.tscn" id="3_p2inq"]
+[ext_resource type="PackedScene" uid="uid://c8rm15y81cony" path="res://marcin/Menu/Chat/ChatWindow.tscn" id="3_p2inq"]
+[ext_resource type="PackedScene" uid="uid://b0jsuvh0njfew" path="res://karol/Test/CMD/consolewindow.tscn" id="4_io3ql"]
 [ext_resource type="Texture2D" uid="uid://cie2tvx812gb" path="res://sprites/mouse_suprised.png" id="4_o0x1b"]
-[ext_resource type="PackedScene" uid="uid://c7pxtgfqa2r0s" path="res://Menu/Navbar/Navbar.tscn" id="5_oswce"]
+[ext_resource type="PackedScene" uid="uid://c7pxtgfqa2r0s" path="res://marcin/Menu/Navbar/Navbar.tscn" id="5_oswce"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ig5gm"]
 atlas = ExtResource("2_nj2f0")
@@ -221,10 +222,11 @@ animations = [{
 script = ExtResource("1_p2inq")
 navbar_scene = ExtResource("5_oswce")
 chat_window_scene = ExtResource("3_p2inq")
+cmd_window_scene = ExtResource("4_io3ql")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(251, 182)
 sprite_frames = SubResource("SpriteFrames_86bup")
-animation = &"suprise"
+animation = &"grab"
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://buo8kepq02r47"]
 
-[ext_resource type="Script" uid="uid://clf6adc8n6bkk" path="res://Menu/Chat/chat.gd" id="1_uul2x"]
-[ext_resource type="PackedScene" uid="uid://dcg5qwbyrio7y" path="res://Menu/Chat/UserBubble/UserBubble.tscn" id="2_aok5u"]
-[ext_resource type="PackedScene" uid="uid://dk62yqnw4mduy" path="res://Menu/Chat/GPTBubble/GptBubble.tscn" id="3_i7kc7"]
-[ext_resource type="PackedScene" uid="uid://ftkesddwqwxu" path="res://Menu/Chat/CommandSwitch/switch_butt.tscn" id="4_i7kc7"]
+[ext_resource type="Script" uid="uid://clf6adc8n6bkk" path="res://marcin/Menu/Chat/chat.gd" id="1_uul2x"]
+[ext_resource type="PackedScene" uid="uid://dcg5qwbyrio7y" path="res://marcin/Menu/Chat/UserBubble/UserBubble.tscn" id="2_aok5u"]
+[ext_resource type="PackedScene" uid="uid://dk62yqnw4mduy" path="res://marcin/Menu/Chat/GPTBubble/GptBubble.tscn" id="3_i7kc7"]
+[ext_resource type="PackedScene" uid="uid://ftkesddwqwxu" path="res://marcin/Menu/Chat/CommandSwitch/switch_butt.tscn" id="4_i7kc7"]
 
 [node name="Chat" type="Control"]
 layout_mode = 3

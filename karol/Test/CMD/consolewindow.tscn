@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0jsuvh0njfew"]
+
+[ext_resource type="Script" uid="uid://cl8ltr3h1ra5t" path="res://karol/Test/CMD/cmd_window.gd" id="1_8y1af"]
+[ext_resource type="PackedScene" uid="uid://bvr8h5fqacbby" path="res://karol/Test/CMD/WindowsConsoleTest.tscn" id="1_d0pnj"]
+
+[node name="Consolewindow" type="Window"]
+oversampling_override = 1.0
+script = ExtResource("1_8y1af")
+
+[node name="WindowsConsoleTest" parent="." instance=ExtResource("1_d0pnj")]

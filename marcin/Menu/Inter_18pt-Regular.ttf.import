@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dqn8vq2tuqdr"
-path="res://.godot/imported/Inter_18pt-Regular.ttf-392d53ea4116c5b98ce3f441e92de7b8.fontdata"
+path="res://.godot/imported/Inter_18pt-Regular.ttf-e75e40c315d17baa2f72b328ebc728ee.fontdata"
 
 [deps]
 
-source_file="res://Menu/Inter_18pt-Regular.ttf"
-dest_files=["res://.godot/imported/Inter_18pt-Regular.ttf-392d53ea4116c5b98ce3f441e92de7b8.fontdata"]
+source_file="res://marcin/Menu/Inter_18pt-Regular.ttf"
+dest_files=["res://.godot/imported/Inter_18pt-Regular.ttf-e75e40c315d17baa2f72b328ebc728ee.fontdata"]
 
 [params]
 

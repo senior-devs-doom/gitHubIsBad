@@ -14,10 +14,12 @@ config/name="wugi"
 run/main_scene="uid://dajr2td3720kj"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
 [autoload]
 
 SystemMonitor="*res://karol/Scripts/SystemMonitor.cs"
 SystemConsole="*res://karol/Scripts/SystemConsole.cs"
+LLM="*res://karol/Scripts/LLM.cs"
 
 [display]
 

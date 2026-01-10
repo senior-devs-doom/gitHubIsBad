@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c7pxtgfqa2r0s"]
 
-[ext_resource type="Theme" uid="uid://b7ihuvdot1738" path="res://Menu/Navbar/inputbar.tres" id="1_rpl0v"]
-[ext_resource type="Script" uid="uid://lssk2dgn4fga" path="res://Menu/Navbar/navbar.gd" id="2_kx302"]
+[ext_resource type="Theme" uid="uid://b7ihuvdot1738" path="res://marcin/Menu/Navbar/inputbar.tres" id="1_rpl0v"]
+[ext_resource type="Script" uid="uid://lssk2dgn4fga" path="res://marcin/Menu/Navbar/navbar.gd" id="2_kx302"]
 
 [node name="Navbar" type="PanelContainer"]
 offset_right = 64.0
@@ -38,3 +38,4 @@ theme = ExtResource("1_rpl0v")
 text = "CMD"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Buttvb/ChatButt" to="." method="_on_chat_butt_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttvb/ChatButt2" to="." method="_on_cmd_butt_pressed"]
