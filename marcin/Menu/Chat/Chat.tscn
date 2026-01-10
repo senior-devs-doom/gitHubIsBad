@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://buo8kepq02r47"]
 
-[ext_resource type="Script" uid="uid://clf6adc8n6bkk" path="res://Menu/Chat/chat.gd" id="1_uul2x"]
-[ext_resource type="PackedScene" uid="uid://dcg5qwbyrio7y" path="res://Menu/Chat/UserBubble/UserBubble.tscn" id="2_aok5u"]
-[ext_resource type="PackedScene" uid="uid://dk62yqnw4mduy" path="res://Menu/Chat/GPTBubble/GptBubble.tscn" id="3_i7kc7"]
-[ext_resource type="PackedScene" uid="uid://ftkesddwqwxu" path="res://Menu/Chat/CommandSwitch/switch_butt.tscn" id="4_i7kc7"]
+[ext_resource type="Script" uid="uid://clf6adc8n6bkk" path="res://marcin/Menu/Chat/chat.gd" id="1_uul2x"]
+[ext_resource type="PackedScene" uid="uid://dcg5qwbyrio7y" path="res://marcin/Menu/Chat/UserBubble/UserBubble.tscn" id="2_aok5u"]
+[ext_resource type="PackedScene" uid="uid://dk62yqnw4mduy" path="res://marcin/Menu/Chat/GPTBubble/GptBubble.tscn" id="3_i7kc7"]
+[ext_resource type="PackedScene" uid="uid://ftkesddwqwxu" path="res://marcin/Menu/Chat/CommandSwitch/switch_butt.tscn" id="4_i7kc7"]
 
 [node name="Chat" type="Control"]
 layout_mode = 3
@@ -18,6 +18,10 @@ messages_vbox_path = NodePath("VBoxContainer/MessagePnael/MarginContainer/Scroll
 scroll_path = NodePath("VBoxContainer/MessagePnael/MarginContainer/ScrollContainer")
 input_path = NodePath("VBoxContainer/InputPanel/MarginContainer/HBoxContainer/TextEdit")
 send_btn_path = NodePath("VBoxContainer/InputPanel/MarginContainer/HBoxContainer/Button")
+switch_butt_path = NodePath("VBoxContainer/PanelContainer/SwitchButt")
+commands_popup_path = NodePath("CommandsPopup")
+commands_scroll_path = NodePath("CommandsPopup/MarginContainer/ScrollContainer")
+commands_list_path = NodePath("CommandsPopup/MarginContainer/ScrollContainer/CommandVBox")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -74,5 +78,24 @@ placeholder_text = "Tutaj piszesz komende"
 [node name="Button" type="Button" parent="VBoxContainer/InputPanel/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
+
+[node name="CommandsPopup" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 404.0
+offset_right = 400.0
+offset_bottom = 483.0
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CommandsPopup"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CommandsPopup/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="CommandVBox" type="VBoxContainer" parent="CommandsPopup/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 0
 
 [connection signal="toggled" from="VBoxContainer/PanelContainer/SwitchButt" to="." method="_on_switch_butt_toggled"]
